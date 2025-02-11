@@ -2,8 +2,8 @@ import friends from "../data/friends";
 import shoppingItems from "../data/shoppingItems";
 import { getTotalAmount } from "../utils/utility";
 
-export default function SettleNowHeader() {
-    const totalUnsettledAmount = getTotalAmount(shoppingItems);
+export default function SettleNowHeader({items}) {
+    const totalUnsettledAmount = getTotalAmount(items);
     const unsettledAmount = totalUnsettledAmount / friends.length;
 
     return (<div className="settle-now-header">
